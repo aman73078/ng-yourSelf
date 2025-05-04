@@ -1,0 +1,88 @@
+<div class="container-sm" *ngIf="images && images.length >= 3">
+    <div class="card mt-5 me-3">
+        <ngb-carousel class="rounded">
+            <ng-template ngbSlide *ngFor="let i of imagesList">
+                <div class="picsum-img-wrapper">
+                    <img [src]="i.imageUrl" style="height: 50vh; width: 100%;" alt="Random first slide" />
+                </div>
+                <div class="carousel-caption">
+                    <!-- <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+    <div class="text-center mt-4 fs-5 text-gray-800 fw-bold">
+        About Section
+    </div>
+    <hr style="margin-top: -11px;">
+
+    <div class="d-flex mt-5">
+        <div class="mt-5" style="width: 50%;height: 80vh;">
+            <h1 animate__backInDown>Start Interview Preparation with yourSelf</h1>
+            <p>yourSelf is your personal interview preparation companion, designed to help you practice, reflect, and
+                improve—all on your own. With AI-powered mock interviews, real-time feedback, and tailored question
+                sets, yourSelf builds your confidence and sharpens your skills for any job interview. Whether you're
+                preparing for your first role or aiming for a career switch, start with yourSelf and step into your next
+                opportunity, fully prepared.</p>
+        </div>
+        <div class="" style="width: 50%;height: 80vh;">
+            <img [src]="'images/interview.png'" alt="">
+        </div>
+    </div>
+    <div class="text-center">
+        <p>Start your journey of self-improvement and career growth with <strong>yourSelf</strong>—because the best
+            way to prepare for an interview is to first prepare <em>yourSelf</em>.</p>
+    </div>
+    <hr class="shadow-lg" style="height: -5px;">
+    <h4 class="fw-bold fs-2 mt-5 text-center">Boost Your Skills</h4>
+      <div class="d-flex flex-wrap justify-content-center mt-4">
+        <div class="card m-2 col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let item of courses" style="max-width: 240px; font-size: 0.9rem;">
+          <img [src]="item.imageUrl" class="card-img-top" alt="Course Image" style="height: 140px; object-fit: cover;">
+      
+          <div class="card-body p-2">
+            <h6 class="card-title mb-2">Course: {{ item.name }}</h6>
+            <p class="card-text mb-2" style="font-size: 0.85rem;">
+              <span>Questions: {{ item.questionCount }}</span><br>
+              <span class="d-flex align-items-center">
+                Rating: {{ item.questionCount || 'N/A' }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="gold" class="mx-1" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73-3.522-3.356c-.329-.314-.158-.888.283-.95l4.898-.696L8.465.792c.197-.39.73-.39.927 0l2.19 4.327 
+                  4.898.696c.441.062.612.636.283.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 
+                  13.187l-4.389 2.256z"/>
+                </svg>
+              </span>
+            </p>
+            <div class="text-center">
+              <a href="#" class="btn btn-danger btn-sm px-3 py-1">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            
+</div>
+<div class="container my-3 mt-5">
+    <div class="border-black border-1 border-bottom"></div>
+    <div class="container mt-5">
+        <h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
+        <!-- <hr class="mb-4" /> -->
+        <div class="accordion" id="faqAccordion">
+          <div class="card mb-3 shadow-sm" *ngFor="let faq of faqs; let i = index">
+            <div class="card-header d-flex justify-content-between align-items-center" (click)="toggleFaq(faq)" style="cursor: pointer;">
+              <h5 class="mb-0">{{ faq.question }}</h5>
+              <span class="fs-3">{{ faq.open ? '-' : '+' }}</span>
+            </div>
+            <div class="card-body" *ngIf="faq.open">
+              <p class="mb-0">{{ faq.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+  
+  
+
+<app-messanger></app-messanger>

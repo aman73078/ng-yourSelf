@@ -1,0 +1,55 @@
+.contact-card {
+    width: 25rem;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .btn-primary {
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 6px 14px rgba(0, 123, 255, 0.6);
+  }
+  
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .bg-gradient-animated {
+    background: linear-gradient(-45deg, #dce35b, #45b649, #6dd5ed, #2193b0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    height: 87vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

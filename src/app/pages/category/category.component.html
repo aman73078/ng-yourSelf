@@ -1,0 +1,59 @@
+<!-- <div class="d-flex min-vh-100">
+    <div class="position-relative bg-light p-3 border-end shadow-sm" 
+         [ngClass]="{'sidebar-collapsed': !isOpen}" 
+         [style.width.px]="isOpen ? 250 : 60"
+         style="transition: width 0.3s ease;">
+
+        <ul class="nav flex-column gap-3">
+            <li class="nav-item d-flex align-items-center cursor-pointer" (click)="onSelect('courses')">
+                <i class="bi bi-book fs-5 text-primary me-2"></i>
+                <span *ngIf="isOpen" class="text-dark">Courses</span>
+            </li>
+            <li class="nav-item d-flex align-items-center cursor-pointer" (click)="onSelect('interviewQuestions')">
+                <i class="bi bi-question-circle fs-5 text-warning me-2"></i>
+                <span *ngIf="isOpen" class="text-dark">Interview Questions</span>
+            </li>
+            <li class="nav-item d-flex align-items-center cursor-pointer" (click)="onSelect('practiveQuestions')">
+                <i class="bi bi-lightbulb fs-5 text-success me-2"></i>
+                <span *ngIf="isOpen" class="text-dark">Problem Solving</span>
+            </li>
+        </ul>
+
+        <button (click)="openOrClose()" 
+                class="btn btn-light rounded-circle position-absolute top-20 translate-middle-y p-1 shadow"
+                style="right: -16px; border-radius: 50%; border: 1px solid #ccc;">
+            <i class="bi" [ngClass]="isOpen ? 'bi-chevron-left' : 'bi-chevron-right'"></i>
+        </button>
+    </div>
+
+    <div class="flex-grow-1 p-4">
+        
+        @switch (selectTab) {
+            @case ('courses') {
+                <app-courses></app-courses>
+            }
+            @case ('interviewQuestions') {
+                <app-interview-courses></app-interview-courses>
+            }
+            @case ('practiveQuestions') {
+                <app-problem-solving></app-problem-solving>
+            }
+
+        }
+      </div>
+      
+</div> -->
+<app-side-nav [tabDetailList]="tabDetailList" (selectedTab)="onSelectedTab($event)" [activeTab]="activeTab">
+    @switch (activeTab) {
+        @case ('courses') {
+            <app-courses></app-courses>
+        }
+        @case ('interviewQuestions') {
+            <app-interview-courses></app-interview-courses>
+        }
+        @case ('practiceProblems') {
+            <app-problem-solving></app-problem-solving>
+        }
+
+    }
+</app-side-nav>

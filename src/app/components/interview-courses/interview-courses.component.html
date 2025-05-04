@@ -1,0 +1,35 @@
+<div class="bg-white p-4 rounded shadow-sm">
+    <h3 class="mb-4 fw-semibold text-primary text-center">
+        📚 Choose Your Favorite Course to Get Started
+    </h3>
+
+    <p class="text-muted text-center mb-5">Explore top-rated courses and test your knowledge with curated questions.</p>
+
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="card m-2 col-11 col-sm-5 col-md-4 col-lg-2" *ngFor="let item of courses"
+            style="max-width: 220px; min-width: 200px;">
+
+            <img [src]="item.imageUrl" class="card-img-top" alt="Course Image"
+                style="height: 140px; object-fit: cover;">
+
+            <div class="card-body p-3">
+                <h6 class="card-title fw-bold mb-2">{{ item.name }}</h6>
+                <p class="card-text mb-2 small">
+                    Questions: {{ item.questionCount }}<br>
+                    <span class="d-flex align-items-center">
+                        Rating: {{ item.questionCount || 'N/A' }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="gold" class="mx-1"
+                            viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73-3.522-3.356c-.329-.314-.158-.888.283-.95l4.898-.696L8.465.792c.197-.39.73-.39.927 0l2.19 4.327 
+                      4.898.696c.441.062.612.636.283.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 
+                      13.187l-4.389 2.256z" />
+                        </svg>
+                    </span>
+                </p>
+                <div class="text-center">
+                    <a href="#" class="btn btn-outline-primary btn-sm">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

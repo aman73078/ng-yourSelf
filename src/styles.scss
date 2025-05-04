@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import "tailwindcss";
+
+/* 🌟 Reusable 3D card style */
+.card {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.85); /* Glass-like effect */
+    backdrop-filter: blur(5px);
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* 🌟 FAQ Avatar Styling */
+  .rounded-circle {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+  }
+  .rounded-circle:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 🌟 FAQ Card Title + Link hover */
+  .card-title {
+    font-weight: bold;
+  }
+  
+  a.link-dark:hover,
+  a.link-success:hover,
+  a.link-secondary:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  /* 🌟 Button Enhancement */
+  .btn {
+    transition: all 0.3s ease-in-out;
+  }
+  .btn:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  body {
+    background: linear-gradient(-45deg, #f3f4f6, #e0f7fa, #fffde7);
+    background-size: 300% 300%;
+    animation: animatedBG 20s ease infinite;
+  }
+  
+  @keyframes animatedBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .bg-gradient-animated {
+    background: linear-gradient(-45deg, #dce35b, #45b649, #6dd5ed, #2193b0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    height: 87vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

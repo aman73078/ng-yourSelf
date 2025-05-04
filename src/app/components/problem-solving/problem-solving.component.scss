@@ -1,0 +1,159 @@
+/* General Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+  
+  /* Table and Rows */
+  table {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 15px;
+    vertical-align: middle;
+  }
+  
+  /* 3D Card-like Effect for each question */
+  .question-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.2s ease;
+    border-radius: 12px;
+  }
+  
+  .question-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    background-color: #f0f8ff;
+  }
+  
+  .answer-row {
+    background-color: #f8f9fa;
+  }
+  
+  /* Difficulty Badges */
+  .badge {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .badge.bg-success {
+    background-color: #28a745 !important;
+  }
+  
+  .badge.bg-warning {
+    background-color: #ffc107 !important;
+  }
+  
+  .badge.bg-danger {
+    background-color: #dc3545 !important;
+  }
+  
+  /* Button Styling */
+  button {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    border-radius: 25px;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Tags Styling */
+  .badge.bg-secondary {
+    background-color: #6c757d !important;
+  }
+  
+  /* Card Hover Effects */
+  .table-responsive {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+  }
+  
+  .table-responsive:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Preformatted Answer Display */
+  pre {
+    white-space: pre-wrap;
+    font-size: 0.9rem;
+    background-color: #f1f3f5;
+    border-radius: 10px;
+  }
+  
+  /* Answer Button Hover Effect */
+  button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Custom Row Shadow on Hover */
+  .question-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .question-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+
+  .answer-row td {
+    text-align: left !important;
+  }
+  
+  .simple-code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0.5rem 0;
+    padding: 0;
+    background: none;
+    color: #000;
+    border: none;
+  }
+
+
+.answer-row td {
+    text-align: left !important;
+  }
+  
+  /* Styled plain code block */
+  .styled-code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 1rem 0;
+    padding: 1rem 1.25rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    color: #212529;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* 3D hover effect (optional) */
+  .styled-code:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12), 0 6px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  

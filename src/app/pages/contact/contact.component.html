@@ -1,0 +1,28 @@
+<div class="bg-gradient-animated d-flex align-items-center" style="height: 87vh;">
+    <div class="container">
+        <div class="row">
+            <!-- Left Content -->
+            <div class="col-md-6 mb-4 mb-md-0 d-flex align-items-center text-white">
+                <div>
+                    <h1 class="display-4">Contact Us</h1>
+                    <p class="lead">We'd love to hear from you. Fill out the form to get in touch.</p>
+                </div>
+            </div>
+
+            <!-- Contact Form Card -->
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="card contact-card">
+                    <div class="card-body">
+                        <form [formGroup]="form">
+                            <formly-form [fields]="fields" [model]="model" [form]="form"></formly-form>
+                            <div class="row m-1">
+                                <button type="submit" class="btn btn-primary mt-3"
+                                    [disabled]="form.invalid">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

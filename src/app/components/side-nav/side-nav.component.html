@@ -1,0 +1,35 @@
+<div class="d-flex min-vh-100">
+    <!-- Sidebar -->
+    <div class="position-relative bg-light p-3 border-end shadow-sm"
+         [ngClass]="{'sidebar-collapsed': !isOpen}" 
+         [style.width.px]="isOpen ? 250 : 60"
+         style="transition: width 0.3s ease; overflow: visible; z-index: 1;">
+      
+      <!-- Sidebar Header with Menu Icon and Toggle Button -->
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- Menu Icon -->
+        <div class="d-flex align-items-center cursor-pointer" (click)="openOrClose()">
+          <i class="bi bi-list fs-4 me-2"></i> <!-- Menu icon (hamburger) -->
+        </div>
+      </div>
+  
+      <!-- Sidebar Items -->
+      <ul class="nav flex-column gap-3 mt-1" *ngFor="let item of tabDetailList">
+        <li class="nav-item d-flex align-items-center cursor-pointer px-2 py-2 rounded"
+            (click)="onSelect(item.key)"
+            [ngClass]="{
+              'sidebar-active': activeTab === item.key,
+              'sidebar-hover': activeTab !== item.key
+            }">
+          <i class="{{item.iconClass}} fs-4 me-2"></i>
+          <span *ngIf="isOpen" class="text-dark fw-semibold fs-6">{{ item.label }}</span>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Main Content -->
+    <div class="flex-grow-1 p-4">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  

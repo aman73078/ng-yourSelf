@@ -1,0 +1,71 @@
+<div class="container mt-3">
+    <form [formGroup]="form">
+        <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+    </form>
+</div>
+<div class="container my-3 mt-2">
+    <div class="border-black border-1 mb-2 border-bottom"></div>
+    <!-- <div class="border-black border-1 border-bottom"></div> -->
+    <!-- <div class="text-center fs-3 fw-bold mt-3 mb-3">Frequently Asked Questions</div> -->
+    <div class="d-flex">
+        <div class="w-75">
+            <div class="card hover:shadow-lg d-flex flex-row align-items-center p-2" style="max-width: 95%;">
+                <div class="d-flex justify-content-center align-items-center me-2" style="width: 70px; height: 70px;">
+                    <span class="rounded-circle bg-black text-white d-flex justify-content-center align-items-center"
+                          style="width: 50px; height: 50px; font-size: 0.9rem;">
+                        AT
+                    </span>
+                </div>
+                <div class="card-body p-2">
+                    <h5 class="card-title" style="font-size: 1rem;">This is my question.</h5>
+                    <p class="card-text" style="font-size: 0.9rem;">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis blanditiis obcaecati quasi distinctio accusamus! Possimus, praesentium corrupti ex autem totam neque unde mollitia. Culpa pariatur dolore assumenda, rerum iure quo sequi, nam sunt ipsa doloribus, animi molestiae odit! Quo tenetur voluptates ratione, officiis ut eligendi nobis vel aliquid commodi aut..
+                    </p>
+                    <hr>
+                    <a class="link-success mx-2 cursor-pointer" style="font-size: 0.9rem;">Angular</a>
+                    <a class="link-secondary mx-3 cursor-pointer" style="font-size: 0.9rem;">Directive</a>
+                </div>
+            </div>
+            <div class="row text-center m-5">
+                <button class=" col-12 btn btn-warning">Load More Questions...</button>
+              </div>
+            
+        </div>
+        <div class="w-25 mx-3">
+            <div class="card hover:shadow-lg" style="width: 18rem;">
+                <div class="card-body">
+                    <div class="card-title fw-bold">Questions Count</div>
+                    <hr>
+                    <div class="bg-gray-300 m-2 p-2">React ( 50 )</div>
+                    <div class="bg-gray-300 m-2 p-2">Javascript ( 50 )</div>
+                </div>
+            </div>
+            <div class="card mt-4 hover:shadow-lg" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Top Categories</h5>
+                    <hr>
+                    <div class="d-flex align-items-center m-2 p-2">
+                        <span class="rounded-circle bg-dark text-white d-flex justify-content-center align-items-center"
+                            style="width: 40px; height: 40px;" ngbTooltip="Aman Triapthi">
+                            AT
+                        </span>
+                        <div class="ms-3 d-flex flex-column">
+                            <a class="link-dark fs-6">admin</a>
+                            <span class="text-gray-500">12 Points</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center m-2 p-2">
+                        <span class="rounded-circle bg-dark text-white d-flex justify-content-center align-items-center"
+                            style="width: 40px; height: 40px;" ngbTooltip="Aman Tripathi">
+                            AT
+                        </span>
+                        <div class="ms-3 d-flex flex-column">
+                            <a class="link-dark fs-6">admin</a>
+                            <span class="text-gray-500">12 Points</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

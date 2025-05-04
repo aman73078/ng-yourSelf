@@ -1,0 +1,58 @@
+.active-nav{
+    border-bottom: 4px solid orange;
+    color: white;
+    background-color: rgba(12, 11, 11, 0.479);
+}
+.active:hover{
+    border-bottom: 4px solid orange;
+    color: white;
+    background-color: rgba(12, 11, 11, 0.479);
+}
+
+.header-container {
+    background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+    padding: 0px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    z-index: 1000;
+  }
+  
+  .logo .brand-part1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  .logo .brand-part2 {
+    color: #ffc107;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    transform: rotateY(10deg);
+    display: inline-block;
+  }
+  
+  .nav-links .nav-item {
+    color: #fff;
+    padding: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s;
+    position: relative;
+    text-shadow: 1px 1px 4px #000;
+  }
+  
+  .nav-links .nav-item:hover {
+    transform: translateZ(10px) scale(1.05);
+    text-shadow: 2px 2px 10px #ffc107;
+    color: #ffc107;
+  }
+  
+  .active-nav {
+    border-bottom: 3px solid #ffc107;
+    color: #ffc107;
+    font-weight: bold;
+  }
+  

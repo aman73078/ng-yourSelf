@@ -1,0 +1,71 @@
+  /* Sidebar container */
+.position-relative {
+    overflow: visible;  /* Allow overflow when open */
+    padding-right: 20px; /* Room for shadow */
+    transition: width 0.3s ease;
+    position: relative;
+  }
+  
+  /* Sidebar when collapsed */
+  .sidebar-collapsed {
+    overflow: hidden !important; /* Clipping the 3D effects when collapsed */
+  }
+  
+  /* Sidebar hover effect */
+  .sidebar-hover:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* Sidebar active effect (selected) */
+  .sidebar-active {
+    background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    border-left: 4px solid #0d6efd;
+    font-weight: bold;
+    border-radius: 6px;
+    z-index: 2;
+    position: relative;
+    padding: 0.5rem;
+  }
+  
+  /* When sidebar is collapsed, hide label and make tab size smaller */
+  .sidebar-collapsed .nav-item {
+    font-size: 0.85rem;
+  }
+  
+  .sidebar-collapsed .nav-item i {
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
+  
+
+  /* Arrow button container */
+.position-relative {
+    position: relative;
+  }
+  
+  /* Make sure the button stays within the sidebar */
+  button {
+    transition: right 0.3s ease;
+    right: -16px;
+    z-index: 2;
+  }
+  
+  /* When the sidebar is collapsed */
+  .sidebar-collapsed button {
+    right: -10px; /* Adjust this to bring the button inside the sidebar area */
+  }
+  
+  /* Make sure the button is vertically centered when the sidebar is collapsed */
+  .sidebar-collapsed button {
+    top: 50% !important;
+    transform: translateY(-50%);
+  }
+  
